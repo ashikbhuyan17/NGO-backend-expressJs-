@@ -9,6 +9,8 @@ const { createEducation } = require('../controller/education');
 const Education = require('../models/education');
 const { createFood, deleteFood, getFood } = require('../controller/food');
 const { createBlood, deleteBlood, getBlood } = require('../controller/blood');
+const { createQurbani, deleteQurbani, getQurbani } = require('../controller/qurbani');
+const { createReview, deleteReview, getReview } = require('../controller/review');
 
 
 
@@ -102,10 +104,22 @@ router.get('/food', getFood)
 router.delete('/food/:id', deleteFood)
 
 //Blood Donation
-router.post('/blood',createBlood)
+router.post('/blood', createBlood)
 router.get('/blood', getFood)
 router.delete('/blood/:id', deleteFood)
 
+
+//Qurbani
+router.post('/qurbani', createQurbani)
+router.get('/qurbani', getQurbani)
+router.delete('/qurbani/:id', deleteQurbani)
+
+
+// review
+//Qurbani
+router.post('/review', createReview)
+router.get('/review', getReview)
+router.delete('/review/:id', deleteReview)
 
 router.get('/', (req, res) => {
     res.send('this is auth page')
