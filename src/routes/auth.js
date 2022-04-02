@@ -106,8 +106,8 @@ router.delete('/food/:id', deleteFood)
 
 //Blood Donation
 router.post('/blood', createBlood)
-router.get('/blood', getFood)
-router.delete('/blood/:id', deleteFood)
+router.get('/blood', getBlood)
+router.delete('/blood/:id', deleteBlood)
 
 
 //Qurbani
